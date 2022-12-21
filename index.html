@@ -7,10 +7,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/e62634a422.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
+  <!-- <script src="script.js" defer></script> -->
   <title>Patricia Fiol >> Web Developer</title>
 </head>
 
 <body>
+
+  <button class="mobile-navigation" aria-controls="navigation" aria-expanded="false"><span class="sr-only">Menu</span>
+    <i class="fa-solid fa-bars" data-visible="true" id="open"></i>
+    <i class="fa-solid fa-xmark" data-visible="false" id="close"></i>
+  </button>
+
+  <nav>
+    <ul class="primary-navigation" id="navigation" data-visible="false">
+      <li class="active"><a href="#"><span aria-hidden="true">00</span>Home</a></li>
+      <li><a href="#about"><span aria-hidden="true">01</span>About</a></li>
+      <li><a href="#skills"><span aria-hidden="true">02</span>Skills</a></li>
+      <li><a href="#projects"><span aria-hidden="true">03</span>Projects</a></li>
+      <li><a href="#contact"><span aria-hidden="true">04</span>Contact</a></li>
+    </ul>
+    <!-- <ul class="social">
+
+      <li><a href="https://githHub.com/PatFiol"><i class="fa-brands fa-github"></i></a></li>
+      <li><a href="http://https://linkedin.com/patriciafiol"><i class="fa-brands fa-linkedin"></i></a></li>
+    </ul> -->
+  </nav>
+
 
   <section id="home">
     <header>
@@ -24,7 +46,7 @@
       <div class="quote">
         <p><span>&#8220;</span><span data-word-art="Art" data-word-code="Code"></span>
           is not what you see, but what you make others see.<span>&#8221;</span></p>
-          
+
         <small>Edgar Degas (Paris,
           1834-1917)</small>
       </div>

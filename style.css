@@ -11,7 +11,7 @@
 
 :root {
 	--very-peri:hsla(239, 29%, 54%, 70%);
-	--amaranth: hsl(341, 80%, 35%);
+	--amaranth: hsla(341, 74%, 33%, 0.8);
 	--main-color: hsl(240, 50%, 30%);
 	--medium-color: hsl(240, 90%, 90%);
 	--light-color: hsl(240, 50%, 90%);
@@ -30,9 +30,46 @@ body {
 	color: var(--main-color);
 	background-color: var(--very-peri);
 	font-family: 'Saira', sans-serif;
+	overflow-x: hidden;
 
 }
 
+/* Navigation Menu */
+
+.primary-navigation {
+	display: flex;
+	gap: 1rem;
+	/* align-items: center; */
+	list-style-type: none;
+	justify-content: right;
+	padding: 1rem;
+	background: var(--light-color);
+}
+
+.primary-navigation li {
+	margin-inline: 1rem;
+}
+
+.primary-navigation a {
+	text-decoration: none;
+	color: var(--main-color);
+	font-size: 1.2rem;
+}
+
+.primary-navigation a > [aria-hidden="true"] {
+	font-weight: 600;
+	margin-inline-end: 0.75em;
+}
+
+.primary-navigation a:hover {
+	color: var(--amaranth);
+}
+
+.mobile-navigation {
+	display: none;
+}
+
+/* Content */
 section {
 	min-height: 100vh;
 	width: 100%;
@@ -43,15 +80,15 @@ section {
 	justify-content: space-around;
 }
 
-header {
+/* header {
 	margin-left: 6rem;
-}
+} */
+
 main {
 	align-self: center;
 	justify-content: center;
 }
 .quote {
-	/* margin-top: 5em; */
 	padding-top: 15rem;
 	text-align: center;
 }
@@ -61,18 +98,18 @@ h1 {
 	font-size: 4.5rem;
 	line-height: 4rem;
 	color: var(--main-color);
-	margin: var(--margin);
+	/* margin: var(--margin); */
 	font-weight: 800;
 }
 
 h2 {
-	font-size: 2.6rem;
-	/* font-family: 'Saira', sans-serif; */
-	font-family: 'Unbounded', cursive;
+	font-size: 3.6rem;
+	font-family: 'Saira', sans-serif;
+	/* font-family: 'Unbounded', cursive; */
 	color: var(--medium-color);
 	font-weight: 600;
 	line-height: 3rem;
-	margin: var(--margin);
+	/* margin: var(--margin); */
 }
 
 h3 {
@@ -151,7 +188,6 @@ header {
 .greeting-bubble {
   font-size: 3.5em;
 	text-align: center;
-  background: hsl(160, 100%, 75%) 73%;
 	background: linear-gradient(-240deg, var(--light-color) 70%, var(--medium-color, 0.5) 70% );
   border-radius: 0.8em;
   box-shadow: 0px 0px 6px rgba(51, 51, 51);
@@ -164,18 +200,6 @@ header {
   animation: greeting 2s ease-in-out 1;
 }
 
-.greeting-bubble::after {
-  content: '';
-  position: absolute;
-  border: 1em solid transparent;
-	border-top-color: var(--light-color);
-  left: 43%;
-  top: 100%;
-  /* transform: skewY(20deg); */
-  transform: rotateY(20deg);
-	/* transform-origin: 100% 100%; */
-
-}
 
 @keyframes greeting {
   0% {
@@ -321,7 +345,7 @@ header {
 
 
 /* RESPONSIVE */
-@media (max-width: 420px) {
+/* @media (max-width: 420px) {
 	h1 {
 		font-size: 3.5rem;
 	}
@@ -331,4 +355,41 @@ header {
 	section {
 		margin: auto;
 	}
+} */
+
+
+@media (max-width: 600px) {
+	.primary-navigation {
+		position: fixed;
+		inset: 0 0 0 30%;
+		z-index: 100;
+
+		flex-direction: column;
+		justify-content: center;
+		gap: 4em;
+		padding: min(30vh, 10rem) 2em;
+
+		transform: translateX(100%);
+	}
+	.primary-navigation[data-visible="true"] {
+		transform: translateX(0%);
+	}
+
+	.mobile-navigation {
+		position: absolute;
+		display: block;
+		width: 4em;
+		aspect-ratio: 1;
+		top: 1em;
+		right: 1em;
+		z-index: 1000;
+		border: none;
+		color: var(--amaranth);
+		background: transparent;
+	}
+
+	.mobile-navigation > i[data-visible="false"] {
+		display: none;
+	}
+
 }
