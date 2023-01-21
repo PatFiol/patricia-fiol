@@ -7,159 +7,323 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/e62634a422.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-  <!-- <script src="script.js" defer></script> -->
   <title>Patricia Fiol >> Web Developer</title>
 </head>
 
 <body>
 
-  <button class="mobile-navigation" aria-controls="navigation" aria-expanded="false"><span class="sr-only">Menu</span>
-    <i class="fa-solid fa-bars" data-visible="true" id="open"></i>
-    <i class="fa-solid fa-xmark" data-visible="false" id="close"></i>
-  </button>
+  <section id="header">
 
-  <nav>
-    <ul class="primary-navigation" id="navigation" data-visible="false">
-      <li class="active"><a href="#"><span aria-hidden="true">00</span>Home</a></li>
-      <li><a href="#about"><span aria-hidden="true">01</span>About</a></li>
-      <li><a href="#skills"><span aria-hidden="true">02</span>Skills</a></li>
-      <li><a href="#projects"><span aria-hidden="true">03</span>Projects</a></li>
-      <li><a href="#contact"><span aria-hidden="true">04</span>Contact</a></li>
-    </ul>
-    <!-- <ul class="social">
+        <div class="container">
+          <div class="nav-list">
+            <div class="hamburger">
+              <div class="bar"></div>
+            </div>
+            <ul>
+              <li><a href="#about" data-after="About">About</a></li>
+              <li><a href="#projects" data-after="Projects">Projects</a></li>
+              <li><a href="#skills" data-after="Skills">Skills</a></li>
+              <li><a href="#contact" data-after="Contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
 
-      <li><a href="https://githHub.com/PatFiol"><i class="fa-brands fa-github"></i></a></li>
-      <li><a href="http://https://linkedin.com/patriciafiol"><i class="fa-brands fa-linkedin"></i></a></li>
-    </ul> -->
-  </nav>
-
-
-  <section id="home">
-    <header>
-      <h1>Patricia Fiol</h1>
-      <h2><i class="fa-solid fa-angles-right"></i> Web Developer</h2>
-    </header>
-    <main class="content home">
-      <div class="greeting-bubble">
-        <div id="greeting"></div>
-      </div>
-      <div class="quote">
-        <p><span>&#8220;</span><span data-word-art="Art" data-word-code="Code"></span>
-          is not what you see, but what you make others see.<span>&#8221;</span></p>
-
-        <small>Edgar Degas (Paris,
-          1834-1917)</small>
-      </div>
-    </main>
   </section>
+
+  <!-- Hero -->
+  <section id="hero">
+
+    <div class="container">
+
+      <header>
+        <p class="intro">My name is<span></span> </p>
+        <h1 class="name">Patricia Fiol <span></span></h1>
+        <p class="intro">I am <span></span></p>
+        <h1 class="title"> Web Developer <span></span></h1>
+      </header>
+      <div id="greeting"><span></span></div>
+
+    </div>
+  </section>
+  <!--  -->
+
+  <!-- About Section -->
 
   <section id="about">
-    <header>
-      <h2><i class="fa-solid fa-angles-right"></i> About me</h2>
-    </header>
-    <main class="content about">
+    <div class="container">
 
-    </main>
-  </section>
+      <header>
+        <h2 class="section-title">About<span> Me</span> </h2>
+      </header>
 
-  <section id="skills">
-    <header>
-      <h2><i class="fa-solid fa-angles-right"></i> Skills</h2>
-    </header>
-    <main class="content skills">
+      <div class="text-block">
+        <p>Since my first console.log when I saw the magic happening for the first time, I became passionate about
+          coding. After graduating from a software engineering bootcamp I continue my journey.</p>
 
-    </main>
-  </section>
+        <p>Currently, doing and learning new stuff every day, to be able to build <strong>scalable and
+            dinamic websites, applications and RESTful APIs</strong> applying modern websites concepts like
+          mobile-first,
+          accessibility and best practices. </p>
 
-  <section id="projects">
-    <header>
-      <h2>
-        <i class="fa-solid fa-angles-right"></i>
-        Projects
-      </h2>
-    </header>
-    <main class="content projects">
+        <p>I am fully engaged to give customers the <strong>best User Experience</strong>, simplifying the complicated
+          and finding the
+          perfect balance between a <strong>great User Interface</strong> and a seamless functionality.</p>
+      </div>
 
-      <div class="cards-container">
 
-        <div class="project-container">
-          <div class="project-card  project-one">
-            <div class="card card-front">
-              <button>Hover Me</button>
-            </div>
-            <div class="card card-back">
-              <h5>Quote Generator</h5>
-              <p>This is a project I created using</p>
-              <div class="tags">
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </div>
-              <div class="repo"><i class="fa-brands fa-github"></i></div>
-            </div>
-          </div>
+      <h3>My <span>CLIC</span> values </h3>
+      <div class="cards-wrapper">
+        <div class="card-item">
+          <h4>Creating</h4>
+          <p>I have worked in photography for many years. I switched light to
+            code as a tool for creating . I keep the
+            keen eye, the focus and my taste for design.</p>
         </div>
-
-        <div class="project-container">
-          <div class="project-card  project-two">
-            <div class="card card-front">
-              <button>Hover me</button>
-            </div>
-            <div class="card card-back">
-              <h5>Project Two</h5>
-              <p>This is a project I created using</p>
-              <div class="tags">
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </div>
-              <div class="repo"><i class="fa-brands fa-github"></i></div>
-            </div>
-          </div>
+        <div class="card-item">
+          <h4>Learning</h4>
+          <p>There is always something new to discover and space to grow. Life is a continuous learning process
+            and I want to
+            live as much as I can.</p>
         </div>
-
-        <div class="project-container">
-          <div class="project-card project-three">
-            <div class="card card-front">
-              <button>Hover Me</button>
-            </div>
-            <div class="card card-back">
-              <h5>Project Three</h5>
-              <p>This is a project I created using</p>
-              <div class="tags">
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </div>
-              <div class="repo"><i class="fa-brands fa-github"></i></div>
-            </div>
-          </div>
+        <div class="card-item">
+          <h4>Inspiring</h4>
+          <p>I like writing, cooking, drawing and doing small DIY projects to keep my hands busy. I enjoy and get
+            inspiration from art, music,
+            literature, cinema...</p>
         </div>
-
-        <div class="no-card">
-          <h3>Coming Soon</h3>
+        <div class="card-item">
+          <h4>Connecting</h4>
+          <p>Connecting with the world, the people and everything around me keeps me
+            motivated. I
+            speak english, spanish, italian and german, for the moment.</p>
         </div>
 
       </div>
-    </main>
+
+    </div>
   </section>
+  <!-- End -->
 
-  <section id="contact">
-    <header>
-      <h2><i class="fa-solid fa-angles-right"></i> Contact</h2>
-    </header>
-    <main class="content contact">
+  <!-- SKILLS -->
 
-    </main>
-  </section>
+  <section id="skills">
 
-  <script src="script.js"></script>
+    <div class="container">
+      <header>
+        <h2 class="section-title">Skills</h2>
+      </header>
+
+      <div class="cards-wrapper">
+
+        <div class="card-item">
+          <img src="assets/dev-icons/html-logo.png" alt="html logo" />
+          <h4>HTML5</h4>
+        </div>
+
+        <div class="card-item">
+          <img src="assets/dev-icons/css-logo.png" alt="css logo" />
+          <h4>CSS3</h4>
+        </div>
+
+        <div class="card-item">
+          <img src="assets/dev-icons/javascript-logo.png" alt="javascript logo" />
+          <h4>JavaScript</h4>
+        </div>
+
+        <div class="card-item">
+          <img src="assets/dev-icons/vue-logo.png" alt="vue logo" />
+          <h4>Vue.js</h4>
+        </div>
+
+        <div class="card-item">
+          <img src="assets/dev-icons/node-logo.png" alt="node logo" />
+          <h4>Node.js</h4>
+        </div>
+
+        <div class="card-item">
+          <img src="assets/dev-icons/express-logo.png" alt="express logo" />
+          <h4>Express</h4>
+        </div>
+
+        <div class="card-item">
+          <img src="assets/dev-icons/mongodb-logo.png" alt="mongodb logo" />
+          <h4>MongoDB</h4>
+        </div>
+
+        <div class="card-item">
+          <img src="assets/dev-icons/git-logo.png" alt="git logo" />
+          <h4>GIT</h4>
+        </div>
+
+      </div>
+    </div>
+
+    </section>
+      <!-- End -->
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <div class="container">
+          <div class="projects-header">
+            <h2 class="section-title">Some <span>Projects</span></h2>
+          </div>
+
+            <div class="cards-wrapper">
+              <div class="card-item">
+                <div class="image">
+                  <img src="assets/img/vertical-slider.png" alt="">
+                </div>
+                <h4>Quote Generator</h4>
+                <p>This is a project I created using</p>
+                <div class="tags">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class="repo"><i class="fa-brands fa-github"></i></div>
+              </div>
+
+              <div class="card-item">
+                <div class="image">
+                  <img src="assets/img/forwards-website.png" alt="">
+                </div>
+                <h4>Quote Generator</h4>
+                <p>This is a project I created using</p>
+                <div class="tags">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class="repo"><i class="fa-brands fa-github"></i></div>
+              </div>
+
+              <div class="card-item">
+                <div class="image">
+                  <img src="assets/img/quote-generator.png" alt="">
+                </div>
+                <h4>Quote Generator</h4>
+                <p>This is a project I created using</p>
+                <div class="tags">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class="repo"><i class="fa-brands fa-github"></i></div>
+            </div>
+
+            <div class="card-item">
+                <div class="image">
+                  <img src="assets/img/book-cast.png" alt="">
+                <img src="assets/img/shopping-list.png" alt="">
+                </div>
+                <h4>Quote Generator</h4>
+                <p>This is a project I created using</p>
+                <div class="tags">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class="repo"><i class="fa-brands fa-github"></i></div>
+              </div>
+
+              <div class="card-item">
+                <div class="image">
+                  <img src="assets/img/feedback-survey.png" alt="">
+                </div>
+                <h4>Quote Generator</h4>
+                <p>This is a project I created using</p>
+                <div class="tags">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class="repo"><i class="fa-brands fa-github"></i></div>
+              </div>
+
+              <div class="card-item">
+                <div class="image">
+                  <img src="assets/img/Forwards.png" alt="">
+                </div>
+                <h4>Quote Generator</h4>
+                <p>This is a project I created using</p>
+                <div class="tags">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class="repo"><i class="fa-brands fa-github"></i></div>
+        </div>
+      </section>
+<!-- End Projects Section -->
+      <!-- Contact Section -->
+      <section id="contact">
+
+        <div class="container">
+          <header>
+            <h2 class="section-title">Contact <span>me</span></h2>
+          </header>
+          <p class="email">contact@patricia.fiol.com</p>
+          <div class="social-items">
+            <div class="social-icon">
+              <a href="#"><img src="assets/icons/icons8-github.png" /></a>
+            </div>
+            <div class="social-icon">
+              <a href="#"><img src="assets/icons/icons8-linkedin.png" /></a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form>
+              <!-- <h3>Get in <span>touch</span></h3> -->
+
+              <div class="form-input">
+                <label for="name"><i class="fas fa-user"></i> Name</label>
+                <input type="text" id="name" placeholder="Your name" required>
+                <small class="error"></small>
+              </div>
+
+              <div class="form-input">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="text" id="email" placeholder="Your email" required></input>
+                <small class="error"></small>
+              </div>
+
+              <div class="form-input">
+                <label for="message"><i class="fa-solid fa-comment-dots"></i> Message</label>
+                <textarea id="message" placeholder="Your message" rows="8"></textarea>
+                <small class="error"></small>
+              </div>
+
+              <div class="form-input">
+                <label for="submit"></label>
+                <input type="submit" value="send">
+                <p id="success"></p>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </section>
+      <!-- End Contact Section -->
+
+      <!-- FOOTER -->
+      <footer>
+        <small>Copyright © 2023 Patricia Fiol. All rights reserved</small>
+      </footer>
+
+      <!-- End Footer -->
+      <script src="script.js"></script>
 </body>
 
 </html>

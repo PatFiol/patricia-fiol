@@ -1,30 +1,42 @@
-// Greeting Animation
+var docWidth = document.documentElement.offsetWidth;
 
-const greetingBubble = document.getElementById('greeting')
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
+
+
+const hamburger = document.querySelector('.nav-list .hamburger');
+const mobile_menu = document.querySelector('.nav-list ul');
+const menu_item = document.querySelectorAll('.nav-list ul li a');
+
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
+});
+
+
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburger.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
+});
+
+
+
+
+// Greeting according to time of the day
+
+const greeting = document.getElementById('greeting')
 
 let timeNow = new Date().getHours()
 
-let greeting = timeNow >= 5 && timeNow < 12 ? 'Good Morning!' : timeNow >= 12 && timeNow <= 18 ? 'Good afternoon!' : 'Good evening!';
 
-greetingBubble.innerHTML = `${greeting}`
+let greetingTime = timeNow >= 5 && timeNow < 12 ? 'Good Morning!' : timeNow >= 12 && timeNow <= 18 ? 'Good afternoon!' : 'Good evening!';
 
-
-// Navigation
-
-const primaryNav = document.querySelector('.primary-navigation')
-const mobileNav = document.querySelector('.mobile-navigation')
-const openToggle = document.getElementById('open')
-const closeToggle = document.getElementById('close')
-
-mobileNav.addEventListener('click', () => {
-  const visible = primaryNav.getAttribute('data-visible')
-  if (visible === 'false') {
-    primaryNav.setAttribute('data-visible', true);
-    openToggle.setAttribute('data-visible', false);
-    closeToggle.setAttribute('data-visible', true);
-  } else {
-    primaryNav.setAttribute('data-visible', false);
-    openToggle.setAttribute('data-visible', true);
-    closeToggle.setAttribute('data-visible', false);
-  }
-})
+greeting.innerHTML = `${greetingTime}`
