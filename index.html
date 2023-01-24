@@ -14,8 +14,9 @@
 
   <section id="header">
 
-        <div class="container">
+        <!-- <div class="container"> -->
           <div class="nav-list">
+            <a href="#hero">PF</a>
             <div class="hamburger">
               <div class="bar"></div>
             </div>
@@ -26,7 +27,7 @@
               <li><a href="#contact" data-after="Contact">Contact</a></li>
             </ul>
           </div>
-        </div>
+        <!-- </div> -->
 
   </section>
 
@@ -36,9 +37,9 @@
     <div class="container">
 
       <header>
-        <p class="intro">My name is<span></span> </p>
-        <h1 class="name">Patricia Fiol <span></span></h1>
-        <p class="intro">I am <span></span></p>
+        <p class="intro first">My name is<span></span> </p>
+        <h1 class="my-name">Patricia Fiol <span></span></h1>
+        <p class="intro second">I am <span></span></p>
         <h1 class="title"> Web Developer <span></span></h1>
       </header>
       <div id="greeting"><span></span></div>
@@ -170,10 +171,11 @@
 
             <div class="cards-wrapper">
               <div class="card-item">
-                <div class="image">
-                  <img src="assets/img/vertical-slider.png" alt="">
-                </div>
-                <h4>Quote Generator</h4>
+                  <!-- <div class="image-container"> -->
+                    <img src="assets/img/vertical-slider.png" alt="">
+                  <!-- </div> -->
+                <div class="info">
+                  <h4>Vertical Slider Portfolio</h4>
                 <p>This is a project I created using</p>
                 <div class="tags">
                   <ul>
@@ -182,31 +184,42 @@
                     <li>JavaScript</li>
                   </ul>
                 </div>
+                </div>
                 <div class="repo"><i class="fa-brands fa-github"></i></div>
               </div>
 
               <div class="card-item">
-                <div class="image">
                   <img src="assets/img/forwards-website.png" alt="">
-                </div>
-                <h4>Quote Generator</h4>
-                <p>This is a project I created using</p>
-                <div class="tags">
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                  </ul>
-                </div>
+                  <h4>Rotating Page Navigation</h4>
+                  <p>This is a project I created using</p>
+                  <div class="tags">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                  </div>
                 <div class="repo"><i class="fa-brands fa-github"></i></div>
               </div>
 
               <div class="card-item">
-                <div class="image">
+                  <img src="assets/img/forwards-website.png" alt="">
+                  <h4>Rotating Page Navigation</h4>
+                  <p>This is a project I created using</p>
+                  <div class="tags">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                  </div>
+                <div class="repo"><i class="fa-brands fa-github"></i></div>
+              </div>
+
+              <div class="card-item">
                   <img src="assets/img/quote-generator.png" alt="">
-                </div>
-                <h4>Quote Generator</h4>
-                <p>This is a project I created using</p>
+                <h4>Random Quote Generator</h4>
+                <p>I used a local database with all my favourite quotes to keep me motivated</p>
                 <div class="tags">
                   <ul>
                     <li>HTML</li>
@@ -218,11 +231,8 @@
             </div>
 
             <div class="card-item">
-                <div class="image">
-                  <img src="assets/img/book-cast.png" alt="">
-                <img src="assets/img/shopping-list.png" alt="">
-                </div>
-                <h4>Quote Generator</h4>
+                  <img src="assets/img/book-cast.png" alt="project screenshot">
+                <h4>Todo Book List</h4>
                 <p>This is a project I created using</p>
                 <div class="tags">
                   <ul>
@@ -235,10 +245,8 @@
               </div>
 
               <div class="card-item">
-                <div class="image">
                   <img src="assets/img/feedback-survey.png" alt="">
-                </div>
-                <h4>Quote Generator</h4>
+                <h4>Customer Feedback Survey</h4>
                 <p>This is a project I created using</p>
                 <div class="tags">
                   <ul>
@@ -251,10 +259,8 @@
               </div>
 
               <div class="card-item">
-                <div class="image">
-                  <img src="assets/img/Forwards.png" alt="">
-                </div>
-                <h4>Quote Generator</h4>
+                  <img src="" alt="">
+                <h4>Horizontal Scrolling Website</h4>
                 <p>This is a project I created using</p>
                 <div class="tags">
                   <ul>
@@ -274,38 +280,38 @@
           <header>
             <h2 class="section-title">Contact <span>me</span></h2>
           </header>
-          <p class="email">contact@patricia.fiol.com</p>
+          <p class="email">contact@patriciafiol.com</p>
           <div class="social-items">
             <div class="social-icon">
-              <a href="#"><img src="assets/icons/icons8-github.png" /></a>
+              <a href="https://github.com/PatFiol"><img src="assets/icons/icons8-github.png" /></a>
             </div>
             <div class="social-icon">
               <a href="#"><img src="assets/icons/icons8-linkedin.png" /></a>
             </div>
           </div>
           <div class="contact-form">
-            <form>
+            <form onsubmit="event.preventDefault(); validateForm()">
               <!-- <h3>Get in <span>touch</span></h3> -->
 
               <div class="form-input">
-                <label for="name"><i class="fas fa-user"></i> Name</label>
+                <label for="name"></label>
                 <input type="text" id="name" placeholder="Your name" required>
                 <small class="error"></small>
               </div>
 
               <div class="form-input">
-                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <label for="email"></label>
                 <input type="text" id="email" placeholder="Your email" required></input>
                 <small class="error"></small>
               </div>
 
               <div class="form-input">
-                <label for="message"><i class="fa-solid fa-comment-dots"></i> Message</label>
+                <label for="message"></label>
                 <textarea id="message" placeholder="Your message" rows="8"></textarea>
                 <small class="error"></small>
               </div>
 
-              <div class="form-input">
+              <div class="form-input submit">
                 <label for="submit"></label>
                 <input type="submit" value="send">
                 <p id="success"></p>
