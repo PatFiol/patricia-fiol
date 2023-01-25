@@ -77,7 +77,7 @@
         <div class="card-item">
           <h4>Creating</h4>
           <p>I have worked in photography for many years. I switched light to
-            code as a tool for creating . I keep the
+            code as a tool for creating. I keep the
             keen eye, the focus and my taste for design.</p>
         </div>
         <div class="card-item">
@@ -289,35 +289,35 @@
               <a href="#"><img src="assets/icons/icons8-linkedin.png" /></a>
             </div>
           </div>
-          <div class="contact-form">
-            <form onsubmit="event.preventDefault(); validateForm()">
-              <!-- <h3>Get in <span>touch</span></h3> -->
+
+            <form class="contact-form" onsubmit="event.preventDefault(); validateForm()">
+              <h3>Get in <span>touch</span></h3>
 
               <div class="form-input">
                 <label for="name"></label>
-                <input type="text" id="name" placeholder="Your name" required>
-                <small class="error"></small>
+                <input type="text" id="name" placeholder="Your name">
+                <span class="error"></span>
               </div>
 
               <div class="form-input">
                 <label for="email"></label>
-                <input type="text" id="email" placeholder="Your email" required></input>
-                <small class="error"></small>
+                <input type="text" id="email" placeholder="Your email"></input>
+                <span class="error"></span>
               </div>
 
               <div class="form-input">
                 <label for="message"></label>
                 <textarea id="message" placeholder="Your message" rows="8"></textarea>
-                <small class="error"></small>
+                <span class="error"></span>
               </div>
 
-              <div class="form-input submit">
+              <div class="form-input">
+                <span id="success"></span>
                 <label for="submit"></label>
                 <input type="submit" value="send">
-                <p id="success"></p>
               </div>
+
             </form>
-          </div>
 
         </div>
       </section>

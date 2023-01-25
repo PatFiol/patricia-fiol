@@ -43,33 +43,40 @@ greeting.innerHTML = `${greetingTime}`
 
 // Contact Form Validation
 
-const nameInput = document.querySelector('#name')
-const email = document.querySelector('#email')
-const message = document.querySelector('#message')
-// const success = document.querySelector('#success')
+const nameInput = document.getElementById('name')
+const email = document.getElementById('email')
+const message = document.getElementById('message')
+const success = document.getElementById('success')
 const errorNodes = document.querySelectorAll('.error')
-const submitBtn = document.querySelector('#submit')
+const form = document.querySelector('.contact-form')
 
 
-submitBtn.addEventListener('submit', function validateForm() {
-  console.log('error!!!!!!!!!!!!')
-  // event.preventDefault();
+function validateForm () {
+
   clearMessages();
+  let errorFlag = false;
 
-  if(nameInput.value.length < 1) {
+  if(nameInput.value === "" || nameInput.value == null) {
     errorNodes[0].innerText = "Name cannot be blank";
     nameInput.classList.add('error')
+    errorFlag = true;
   }
-  if(!emailIsValid(email.value)) {
+  if(!email.value.match(/\S+@\S+\.\S+/)) {
     errorNodes[1].innerText = "Invalid email address";
     email.classList.add('error')
+    errorFlag = true;
   }
-  if(message.value.length < 1) {
+  if(message.value === "" || message.value == null) {
     errorNodes[2].innerText = "Please write something";
     message.classList.add('error')
+    errorFlag = true;
+  }
+  if(!errorFlag) {
+    success.style.display ='block';
+    success.innerHTML = 'Message sent. Thank you!'
   }
 
-})
+}
 
 function clearMessages() {
   for (let i = 0; i < errorNodes.length; i++) {
@@ -79,8 +86,3 @@ function clearMessages() {
   email.classList.remove('error');
   message.classList.remove('error');
 };
-
-function emailIsValid() {
-  let pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  return pattern.test(email);
-}
