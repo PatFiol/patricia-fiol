@@ -22,8 +22,6 @@
 
 	--box-shadow: 0 1px 10px var(--alpha-bg);
 	--inside-box-shadow: 0px 1px 6px var(--light-grey);
-
-
 }
 
 html {
@@ -61,12 +59,14 @@ h3 {
 h4 {
 	font-size: 1.4rem;
 	font-weight: 600;
+	/* text-align: center; */
+	margin-bottom: .3rem;
 }
 
 p {
 	font-size: 1.1rem;
 	line-height: 1.5;
-	text-align: left;
+
 	margin-bottom: 1rem;
 }
 a {
@@ -83,14 +83,17 @@ h3 span, h2 span,
 	color: var(--amaranth);
 }
 
+#about .card-item h4 {
+	text-align: left;
+}
 .container {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
 	justify-content: space-evenly;
 	min-height: 100vh;
-	/* width: 100%; */
-	/* max-width: 1200px; */
+	width: 100%;
+	max-width: 1200px;
 	margin: auto;
 
 }
@@ -109,10 +112,10 @@ h3 span, h2 span,
 	flex-basis: 90%;
 	display: flex;
 	align-items: flex-start;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	flex-direction: column;
 	align-self: normal;
-	padding: 1.2rem;
+	padding: 1rem;
 	margin: 2%;
 }
 /* || HEADER || Navigation Menu */
@@ -385,6 +388,9 @@ h3 span, h2 span,
 	background-repeat: no-repeat;
 }
 
+/* #about .card-item {
+	justify-item: center;
+} */
 #about .text-block {
 	max-width: 60ch;
 	margin: auto 2rem;
@@ -410,11 +416,8 @@ h3 span, h2 span,
 }
 
 #skills .card-item {
-	/* flex-basis: 25%; */
-
-	align-items: center;
 	margin: 1%;
-	width: 100%;
+	align-items: center;
 	max-width: fit-content;
 	height: fit-content;
 }
@@ -435,49 +438,42 @@ h3 span, h2 span,
 }
 
 #projects .card-item {
-	align-items: center;
+	position: relative;
+}
 
+#projects .card-item h4 {
+	align-items: center;
 }
 
 #projects .card-item img {
-	/* border-radius: 6px; */
-	border: 2px double var(--light-grey);
+	box-shadow:
+	0px 18px 0px -8px black;
+
 	width: 90%;
-	/* max-height: 40vw; */
 	height: auto;
 	object-fit: cover;
 }
 #projects h4 {
 	padding-top: 1rem;
-	align-items: center;
 }
 
-
-#projects .card-item .tags ul {
-	display: flex;
-	/* flex-wrap: wrap; */
-	align-items: center;
-	gap: 1em;
-	list-style: none;
-}
-
-#projects .card-item .tags ul li {
+#projects .card-item .tags span {
 	font-size: small;
 	border-radius: 0.2rem;
 	padding: 0 0.5rem;
-	color: var(--dark-grey);
+	margin: .5rem;
+	color: var(--light-color);
 	background: var(--light-grey);
-	/* background-image: radial-gradient(
-		var(--light-color),
-		var(--dark-grey)
-	); */
+	box-shadow: 1px 1px 0 var(--medium-grey);
 }
 
 #projects .repo {
+	color: var(--veryperi);
+	font-size: 2em;
 	position: absolute;
-	top: 80%;
-	left: 85%;
-	font-size: 2.5em;
+	bottom: 0;
+	right: 2%;
+
 }
 
 /* CONTACT SECTION */
@@ -491,17 +487,14 @@ h3 span, h2 span,
 	padding-bottom: 8%;
 }
 
-#contact .container {
-	justify-content: start;
-}
 #contact .email {
 	color: var(--medium-grey);
 	font-weight: 600;
 	font-size: 1.6rem;
 }
+
 #contact .contact-form {
 	width: 80vw;
-	/* padding-top: 1rem; */
 }
 
 #contact .form-input {
@@ -592,9 +585,6 @@ footer {
 		padding-bottom: 25%;
 	}
 
-	/* #hero header {
-    margin-left: -50%;
-  } */
 	#hero header {
 		padding: 4rem 2rem;
 	}
@@ -606,10 +596,8 @@ footer {
 	#about .text-block {
 		margin: 2rem auto;
 	}
-	#about .clic-values .clic-item {
+	#about .card-item {
 		flex-basis: 30%;
-		margin: 2%;
-		height: 280px;
 	}
 
 	#skills .card-item {
@@ -627,20 +615,12 @@ footer {
 		padding-bottom: 10%;
 	}
 	#about .cards-wrapper .card-item {
-		flex-basis: 40%;
+		/* flex-basis: 40%; */
 	}
 	#skills .cards-wrapper {
-		width: 85%;
+		width: 70%;
 	}
-	/* #about .cards-wrapper .card-item {
-		flex-basis: 80%;
-	} */
 
-	#hero header {
-		margin-left: -50%;
-		/* padding: 0; */
-		/* margin-top: 10%; */
-	}
 	#greeting {
 		margin-top: 10%;
 	}
@@ -659,13 +639,20 @@ footer {
 		font-size: 3rem;
 		margin-top: 10%;
 	}
+	#about .cards-wrapper {
+		width: 80%;
+		flex-flow: nowrap;
+	}
+	#about .card-item {
+		margin: 1rem;
+	}
 
 	#skills .cards-wrapper {
-		width: 50%;
+		width: 60%;
 	}
 
 	#projects .card-item {
-		flex-basis: 40%;
+		flex-basis: 45%;
 	}
 
 	#contact {
