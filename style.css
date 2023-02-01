@@ -12,7 +12,7 @@
 :root {
 	--light-color: hsl(0, 18%, 98.5%);
 	--main-color: hsl(240, 30%, 40%);
-	--veryperi: #6869ac;
+	--veryperi: hsl(239, 29%, 54%);
 	--amaranth: hsl(350, 89%, 57%);
 	--light-grey: hsl(240, 5%, 70%);
 	--medium-grey: hsl(240, 5%, 50%);
@@ -111,7 +111,7 @@ h3 span, h2 span,
 	flex-basis: 90%;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-direction: column;
 	align-self: normal;
 	padding: 1rem;
@@ -387,9 +387,6 @@ h3 span, h2 span,
 	background-repeat: no-repeat;
 }
 
-/* #about .card-item {
-	justify-item: center;
-} */
 #about .text-block {
 	max-width: 60ch;
 	margin: auto 2rem;
@@ -403,7 +400,7 @@ h3 span, h2 span,
 		hsl(239, 29%, 54%),
 		hsl(0, 14%, 99%)
 	);
-	background: linear-gradient(180deg, rgba(104, 105, 172, 0.5), rgb(252, 251, 251));
+	background: linear-gradient(180deg, hsla(239, 29%, 54%, 0.5), hsl(0, 14%, 99%));
 }
 
 #skills .cards-wrapper {
@@ -470,12 +467,22 @@ h3 span, h2 span,
 	position: absolute;
 	background: var(--alpha-bg);
 	width: 100%;
+	top: 0;
 }
 
 #projects .links a {
 	color: var(--light-color);
 	font-size: 2em;
 	margin: .5rem;
+}
+
+#projects .notification {
+	background-color: var(--alpha-bg);
+	color: var(--light-color);
+	font-weight: 600;
+	padding: 1em;
+	width: 100%;
+	margin-top: 1em;
 }
 
 /* CONTACT SECTION */
@@ -569,8 +576,7 @@ textarea:focus {
 }
 
 #contact .social-icon img:hover {
-	/* filter: hue-rotate(90deg); */
-	filter: contrast(200%);
+	filter: hue-rotate(90deg);
 }
 /* FOOTER section */
 footer {
@@ -617,12 +623,16 @@ footer {
 		padding-bottom: 10%;
 	}
 
+	#greeting {
+		margin-top: 10%;
+	}
+
 	#skills .cards-wrapper {
 		width: 70%;
 	}
 
-	#greeting {
-		margin-top: 10%;
+	#projects .card-item {
+		flex-basis: 45%;
 	}
 }
 @media only screen and (min-width: 1200px) {
