@@ -59,7 +59,6 @@ h3 {
 h4 {
 	font-size: 1.4rem;
 	font-weight: 600;
-	/* text-align: center; */
 	margin-bottom: .3rem;
 }
 
@@ -111,7 +110,7 @@ h3 span, h2 span,
 	border: none;
 	flex-basis: 90%;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: space-between;
 	flex-direction: column;
 	align-self: normal;
@@ -441,20 +440,20 @@ h3 span, h2 span,
 	position: relative;
 }
 
-#projects .card-item h4 {
-	align-items: center;
-}
-
 #projects .card-item img {
 	box-shadow:
-	0px 18px 0px -8px black;
-
-	width: 90%;
-	height: auto;
+	0px 18px 10px -8px var(--dark-grey);
+	width: 100%;
+	border-radius: 2px;
 	object-fit: cover;
+	object-position: center top;
+	aspect-ratio: 4 / 3;
 }
 #projects h4 {
-	padding-top: 1rem;
+	padding-top: 1.1rem;
+}
+#projects p {
+	text-align: center;
 }
 
 #projects .card-item .tags span {
@@ -467,13 +466,16 @@ h3 span, h2 span,
 	box-shadow: 1px 1px 0 var(--medium-grey);
 }
 
-#projects .repo {
-	color: var(--veryperi);
-	font-size: 2em;
+#projects .links {
 	position: absolute;
-	bottom: 0;
-	right: 2%;
+	background: var(--alpha-bg);
+	width: 100%;
+}
 
+#projects .links a {
+	color: var(--light-color);
+	font-size: 2em;
+	margin: .5rem;
 }
 
 /* CONTACT SECTION */
@@ -614,9 +616,7 @@ footer {
 		margin-left: -50%;
 		padding-bottom: 10%;
 	}
-	#about .cards-wrapper .card-item {
-		/* flex-basis: 40%; */
-	}
+
 	#skills .cards-wrapper {
 		width: 70%;
 	}
