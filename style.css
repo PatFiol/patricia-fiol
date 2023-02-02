@@ -129,7 +129,7 @@ h3 span, h2 span,
 	justify-content: space-between;
 	width: 100%;
 	height: 8vh;
-	padding: 1rem;
+	padding: 1.5rem;
 	background-color: var(--alpha-bg);
 }
 #header .nav-list ul {
@@ -675,4 +675,11 @@ footer {
 	#contact .contact-form {
 		width: 40vw;
 	}
+}
+
+@media only screen and (min-width: 1400px){
+	#hero header {
+		margin-left: -90%;
+	}
+
 }
