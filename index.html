@@ -15,7 +15,7 @@
 
   <section id="header">
 
-    <div class="nav-list">
+    <nav class="nav-list">
       <a href="#hero" class="logo"><img src="assets/logo.png" alt="logo"></a>
       <a class="email" href="mailto:contact@patriciafiol.com">contact@patriciafiol.com</a>
       <div class="hamburger">
@@ -27,7 +27,7 @@
         <li><a href="#projects" data-after="Projects">Projects</a></li>
         <li><a href="#contact" data-after="Contact">Contact</a></li>
       </ul>
-    </div>
+    </nav>
   </section>
 
   <!-- HERO -->
@@ -39,7 +39,7 @@
         <p class="intro first">My name is<span></span> </p>
         <h1 class="my-name">Patricia Fiol <span></span></h1>
         <p class="intro second">I am <span></span></p>
-        <h1 class="title"> Web Developer <span></span></h1>
+        <h2 class="job-title"> Web Developer <span></span></h2>
       </header>
       <div id="greeting"><span></span></div>
 
@@ -48,12 +48,10 @@
 
   <!-- ABOUT -->
 
-  <section id="about">
+  <section id="about" aria-labelledby="about-title">
     <div class="container">
 
-      <header>
-        <h2>About<span> Me</span> </h2>
-      </header>
+        <h2 id="about-title" class="title">About Me</h2>
 
       <div class="text-block">
         <p>Since my first console.log when I saw the magic happening for the first time, I became passionate about
@@ -94,12 +92,11 @@
 
   <!-- SKILLS -->
 
-  <section id="skills">
+  <section id="skills" aria-labelledby="skills-title">
+
 
     <div class="container">
-      <header>
-        <h2>Skills</h2>
-      </header>
+      <h2 id="skills-title" class="title">Skills</h2>
 
       <div class="cards-wrapper">
 
@@ -149,11 +146,10 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects">
+  <section id="projects" aria-labelledby="projects-title">
     <div class="container">
-      <div class="projects-header">
-        <h2>Some <span>Projects</span></h2>
-      </div>
+
+        <h2 id="projects-title" class="title">Projects</h2>
 
       <div class="cards-wrapper">
 
@@ -228,13 +224,11 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact" aria-labelledby="contact-title">
 
     <div class="container">
-      <header>
-        <h2>Contact <span>me</span></h2>
-      </header>
-      <!-- <a class="email" href="mailto:contact@patriciafiol.com">contact@patriciafiol.com</a> -->
+
+        <h2 id="contact-title" class="title">Contact me</h2>
 
       <div class="social-items">
         <div class="social-icon">
@@ -266,11 +260,10 @@
           <span class="error"></span>
         </div>
 
-        <div class="form-input">
-          <span id="success"></span>
-          <label for="submit"></label>
-          <input type="submit" value="send">
-        </div>
+        <span id="success"></span>
+        <button value="send">
+         Send
+        </button>
 
       </form>
 
