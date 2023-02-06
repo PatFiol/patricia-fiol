@@ -15,7 +15,7 @@
 
   <section id="header">
 
-    <div class="nav-list">
+    <nav class="nav-list">
       <a href="#hero" class="logo"><img src="assets/logo.png" alt="logo"></a>
       <a class="email" href="mailto:contact@patriciafiol.com">contact@patriciafiol.com</a>
       <div class="hamburger">
@@ -27,7 +27,7 @@
         <li><a href="#projects" data-after="Projects">Projects</a></li>
         <li><a href="#contact" data-after="Contact">Contact</a></li>
       </ul>
-    </div>
+    </nav>
   </section>
 
   <!-- HERO -->
@@ -39,7 +39,7 @@
         <p class="intro first">My name is<span></span> </p>
         <h1 class="my-name">Patricia Fiol <span></span></h1>
         <p class="intro second">I am <span></span></p>
-        <h1 class="title"> Web Developer <span></span></h1>
+        <h2 class="job-title"> Web Developer <span></span></h2>
       </header>
       <div id="greeting"><span></span></div>
 
@@ -48,19 +48,17 @@
 
   <!-- ABOUT -->
 
-  <section id="about">
+  <section id="about" aria-labelledby="about-title">
     <div class="container">
 
-      <header>
-        <h2>About<span> Me</span> </h2>
-      </header>
+        <h2 id="about-title" class="title">About Me</h2>
 
       <div class="text-block">
         <p>Since my first console.log when I saw the magic happening for the first time, I became passionate about
           coding. After graduating from a software engineering bootcamp I continue my journey.</p>
 
-        <p>Currently, doing and learning new stuff every day, to be able to build <strong>scalable and
-            dinamic websites, single page applications and RESTful APIs.</strong></p>
+        <p>Currently, doing and learning new stuff every day, to be able to build <strong>dinamic and accessible
+             websites, single page applications and RESTful APIs.</strong></p>
 
         <p>I am fully engaged to give customers the <strong>best User Experience</strong>, simplifying the complicated
           and finding the
@@ -76,7 +74,7 @@
         </div>
         <div class="card-item">
           <h4>Learning</h4>
-          <p>There is always something new to discover, so much space around to grow. Life is a continuous learning process and I want to live very long.</p>
+          <p>There is always something new to discover, so much space above to grow. Life is a continuous learning process and I want to live very long.</p>
         </div>
         <div class="card-item">
           <h4>Inspiring</h4>
@@ -94,53 +92,52 @@
 
   <!-- SKILLS -->
 
-  <section id="skills">
+  <section id="skills" aria-labelledby="skills-title">
+
 
     <div class="container">
-      <header>
-        <h2>Skills</h2>
-      </header>
+      <h2 id="skills-title" class="title">Skills</h2>
 
       <div class="cards-wrapper">
 
         <div class="card-item">
-          <img src="assets/dev-icons/html-logo.png" alt="html logo" />
-          <h4>HTML5</h4>
+          <img src="assets/dev-icons/html-logo.png" alt="logo" />
+          <span>HTML5</span>
         </div>
 
         <div class="card-item">
-          <img src="assets/dev-icons/css-logo.png" alt="css logo" />
-          <h4>CSS3</h4>
+          <img src="assets/dev-icons/css-logo.png" alt="logo" />
+          <span>CSS3</span>
         </div>
 
         <div class="card-item">
-          <img src="assets/dev-icons/javascript-logo.png" alt="javascript logo" />
-          <h4>JavaScript</h4>
+          <img src="assets/dev-icons/javascript-logo.png" alt="logo" />
+          <span>JavaScript</span>
         </div>
 
         <div class="card-item">
-          <img src="assets/dev-icons/vue-logo.png" alt="vue logo" />
-          <h4>Vue.js</h4>
+          <img src="assets/dev-icons/vue-logo.png" alt="logo" />
+          <span>Vue.js</span>
         </div>
 
         <div class="card-item">
-          <img src="assets/dev-icons/node-logo.png" alt="node logo" />
-          <h4>Node.js</h4>
+          <img src="assets/dev-icons/node-logo.png" alt="logo" />
+          <span>Node.js</span>
         </div>
 
         <div class="card-item">
-          <img src="assets/dev-icons/express-logo.png" alt="express logo" />
-          <h4>Express</h4>
+          <img src="assets/dev-icons/express-logo.png" alt="logo" />
+          <span>Express</span>
         </div>
 
         <div class="card-item">
-          <img src="assets/dev-icons/mongodb-logo.png" alt="mongodb logo" />
-          <h4>MongoDB</h4>
+          <img src="assets/dev-icons/mongodb-logo.png" alt="logo" />
+          <span>MongoDB</span>
         </div>
 
         <div class="card-item">
-          <img src="assets/dev-icons/git-logo.png" alt="git logo" />
-          <h4>GIT</h4>
+          <img src="assets/dev-icons/git-logo.png" alt="logo" />
+          <span>GIT</span>
         </div>
 
       </div>
@@ -149,16 +146,19 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects">
+  <section id="projects" aria-labelledby="projects-title">
     <div class="container">
-      <div class="projects-header">
-        <h2>Some <span>Projects</span></h2>
-      </div>
+
+        <h2 id="projects-title" class="title">Projects</h2>
 
       <div class="cards-wrapper">
 
         <div class="card-item">
-          <img src="assets/img/vertical-slider.png" alt="project screenshot">
+         <picture>
+            <source srcset="assets/img/vertical-slider.webp" type="image/webp">
+            <source srcset="assets/img/vertical-slider-1000.jpg" media="(min-width: 600px">
+            <img src="assets/img/vertical-slider-600.jpg" alt="project screenshot">
+          </picture>
           <h4>Vertical Slider Portfolio</h4>
           <p>Visual portfolio website for viewing pictures with two sliders that run in opposite directions, matching the background colors.</p>
           <div class="tags">
@@ -173,7 +173,11 @@
         </div>
 
         <div class="card-item">
-          <img src="assets/img/quote-generator.png" alt="project screenshot">
+          <picture>
+            <source srcset="assets/img/quote-generator.webp" type="image/webp">
+            <source srcset="assets/img/quote-generator-1000.jpg" media="(min-width: 600px">
+            <img src="assets/img/quote-generator-600.jpg" alt="project screenshot">
+          </picture>
           <h4>Random Quote Generator</h4>
           <p>A simple quote generator that shows random quotes stored in a local database. A practical way to apply JavaScript. </p>
           <div class="tags">
@@ -188,7 +192,11 @@
         </div>
 
         <div class="card-item">
-          <img src="assets/img/forwards-website.png" alt="project screenshot">
+          <picture>
+            <source srcset="assets/img/forwards-website.webp" type="image/webp">
+            <source srcset="assets/img/forwards-website-1000.jpg" media="(min-width: 600px">
+            <img src="assets/img/forwards-website-600.jpg" alt="project screenshot">
+          </picture>
           <h4>Rotating Page Navigation</h4>
           <p>A website for an hypothetical delivery company, with a minimalistic layout and a rotating effect to show
             the navigation menu.</p>
@@ -205,7 +213,11 @@
         </div>
 
         <div class="card-item">
-          <img src="assets/img/feedback-survey.png" alt="project screenshot">
+          <picture>
+            <source srcset="assets/img/feedback-survey.webp" type="image/webp">
+            <source srcset="assets/img/feedback-survey-1000.jpg" media="(min-width: 600px">
+            <img src="assets/img/feedback-survey-600.jpg" alt="project screenshot">
+          </picture>
           <h4>Customer Feedback Survey</h4>
           <p>A simple and interactive way to receive feedback from your customers. This was my first single project.</p>
           <div class="tags">
@@ -228,13 +240,11 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact" aria-labelledby="contact-title">
 
     <div class="container">
-      <header>
-        <h2>Contact <span>me</span></h2>
-      </header>
-      <!-- <a class="email" href="mailto:contact@patriciafiol.com">contact@patriciafiol.com</a> -->
+
+        <h2 id="contact-title" class="title">Contact me</h2>
 
       <div class="social-items">
         <div class="social-icon">
@@ -266,11 +276,10 @@
           <span class="error"></span>
         </div>
 
-        <div class="form-input">
-          <span id="success"></span>
-          <label for="submit"></label>
-          <input type="submit" value="send">
-        </div>
+        <span id="success"></span>
+        <button value="send">Send
+          <label for="send"></label>
+        </button>
 
       </form>
 
