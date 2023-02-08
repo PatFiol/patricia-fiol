@@ -1,4 +1,4 @@
-<?php
+<?ph
 
 if(isset($_POST['submit'])) {
   $name = $_POST['name'];
@@ -10,7 +10,7 @@ if(isset($_POST['submit'])) {
   $headers = "From: ".$mailFrom;
   $txt = "Through the contact-form from: .$name\n E-Mail: .$email\n Message:\n .$message";
 
-  sendEmail($mailTo, $subject, $txt, $headers);
+  mail($mailTo, $subject, $txt, $headers);
 
   echo `<span id="success">Message sent. Thank you!</span>`
 
