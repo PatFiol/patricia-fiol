@@ -38,6 +38,7 @@ const message = document.getElementById('message')
 const success = document.getElementById('success')
 const errorNodes = document.querySelectorAll('.error')
 const form = document.querySelector('.contact-form')
+const sendBtn = document.getElementById('submit')
 
 
 function validateForm () {
@@ -61,10 +62,10 @@ function validateForm () {
     errorFlag = true;
   }
   if(!errorFlag) {
-    success.style.display ='block';
-    success.innerHTML = 'Message sent. Thank you!'
+    // success.style.display ='block';
+    // success.innerHTML = 'Message sent. Thank you!'
+    form.reset()
   }
-
 }
 
 function clearMessages() {
@@ -75,3 +76,25 @@ function clearMessages() {
   email.classList.remove('error');
   message.classList.remove('error');
 };
+
+
+// Send Message
+
+// sendBtn.addEventListener('submit', (sendEmail))
+
+function sendEmail() {
+  email.send({
+    Host:"smtp.office365.com",
+    Username : "Patricia Fiol",
+    Password : "1Dalmata+100",
+    To: "patricia.fiol@outlook.com",
+    From: email.value,
+    Subject: "New Contact Form Enquiry",
+    Body: "Name: " + nameInput.value
+          + "<br> Email: " + email.value
+          + "<br> Message: " + message.value
+  })
+  // .then(
+  //   message => alert(message)
+  // );
+}
