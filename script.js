@@ -80,21 +80,3 @@ function clearMessages() {
 
 // Send Message
 
-// sendBtn.addEventListener('submit', (sendEmail))
-
-// function sendEmail() {
-//   email.send({
-//     Host:"smtp.office365.com",
-//     Username : "Patricia Fiol",
-//     Password : "1Dalmata+100",
-//     To: "patricia.fiol@outlook.com",
-//     From: email.value,
-//     Subject: "New Contact Form Enquiry",
-//     Body: "Name: " + nameInput.value
-//           + "<br> Email: " + email.value
-//           + "<br> Message: " + message.value
-//   })
-  // .then(
-  //   message => alert(message)
-  // );
-// }
