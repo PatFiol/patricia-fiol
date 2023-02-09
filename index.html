@@ -206,7 +206,7 @@
             <span>JavaScript</span>
           </div>
           <div class="links">
-            <a href="https://bright-jelly-f0fa8e.netlify.app" target="_blank"><i
+            <a href="https://forwards-website.netlify.app" target="_blank"><i
                 class="fa-solid fa-eye"></i></a>
             <a href="https://github.com/PatFiol/forwards-website" target="_blank"><i class="fa-brands fa-github"></i></a>
           </div>
@@ -255,31 +255,33 @@
         </div>
       </div>
 
-      <form class="contact-form" onsubmit="event.preventDefault(); validateForm()">
+      <form action="https://formspree.io/f/https://formspree.io/f/xdoveged" method="post" class="contact-form" onsubmit="event.preventDefault(); validateForm()">
         <h3>Get in <span>touch</span></h3>
 
         <div class="form-input">
           <label for="name"></label>
-          <input type="text" id="name" placeholder="Your name">
+          <input type="text" name="name" id="name" placeholder="Your name">
           <span class="error"></span>
         </div>
 
         <div class="form-input">
           <label for="email"></label>
-          <input type="text" id="email" placeholder="Your email"></input>
+          <input type="text" name="email" id="email" name="email" placeholder="Your email"></input>
           <span class="error"></span>
         </div>
 
         <div class="form-input">
           <label for="message"></label>
-          <textarea id="message" placeholder="Your message" rows="8"></textarea>
+          <textarea id="message" name="message" placeholder="Your message" rows="8"></textarea>
           <span class="error"></span>
         </div>
 
         <span id="success"></span>
-        <button value="send">Send
+
+        <button type="submit" id="submit" value="send">Send
           <label for="send"></label>
         </button>
+
 
       </form>
 
