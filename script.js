@@ -61,9 +61,6 @@ function validateForm () {
     message.classList.add('error')
     errorFlag = true;
   }
-  if(!errorFlag) {
-    form.reset()
-  }
 }
 
 function clearMessages() {
