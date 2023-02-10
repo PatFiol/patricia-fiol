@@ -256,24 +256,24 @@
       </div>
 
       <form action="https://formspree.io/f/xdovedav"
-      method="POST" class="contact-form" onsubmit="event.validateForm()">
+      method="POST" class="contact-form"">
         <h3>Get in <span>touch</span></h3>
 
         <div class="form-input">
           <label for="name"></label>
-          <input type="text" name="name" id="name" placeholder="Your name">
+          <input type="text" name="name" id="name" placeholder="Your name" required>
           <span class="error"></span>
         </div>
 
         <div class="form-input">
           <label for="email"></label>
-          <input type="text" name="email" id="email" name="email" placeholder="Your email"></input>
+          <input type="text" name="email" id="email" name="email" placeholder="Your email" required></input>
           <span class="error"></span>
         </div>
 
         <div class="form-input">
           <label for="message"></label>
-          <textarea id="message" name="message" placeholder="Your message" rows="8"></textarea>
+          <textarea id="message" name="message" placeholder="Your message" rows="8" required></textarea>
           <span class="error"></span>
         </div>
 

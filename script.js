@@ -30,44 +30,4 @@ let greetingTime = timeNow >= 5 && timeNow < 12 ? 'Good Morning!' : timeNow >= 1
 greeting.innerHTML = `${greetingTime}`
 
 
-// Contact Form Validation
 
-const nameInput = document.getElementById('name')
-const email = document.getElementById('email')
-const message = document.getElementById('message')
-const success = document.getElementById('success')
-const errorNodes = document.querySelectorAll('.error')
-const form = document.querySelector('.contact-form')
-const sendBtn = document.getElementById('submit')
-
-
-function validateForm () {
-
-  clearMessages();
-  let errorFlag = false;
-
-  if(nameInput.value === "" || nameInput.value == null) {
-    errorNodes[0].innerText = "Name cannot be blank";
-    nameInput.classList.add('error')
-    errorFlag = true;
-  }
-  if(!email.value.match(/\S+@\S+\.\S+/)) {
-    errorNodes[1].innerText = "Invalid email address";
-    email.classList.add('error')
-    errorFlag = true;
-  }
-  if(message.value === "" || message.value == null) {
-    errorNodes[2].innerText = "Please write something";
-    message.classList.add('error')
-    errorFlag = true;
-  }
-}
-
-function clearMessages() {
-  for (let i = 0; i < errorNodes.length; i++) {
-    errorNodes[i].innerText = " ";
-  }
-  nameInput.classList.remove('error');
-  email.classList.remove('error');
-  message.classList.remove('error');
-};
