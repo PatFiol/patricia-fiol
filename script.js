@@ -76,3 +76,4 @@ function clearMessages() {
   email.classList.remove('error');
   message.classList.remove('error');
 };
+
