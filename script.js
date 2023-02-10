@@ -62,8 +62,8 @@ function validateForm () {
     errorFlag = true;
   }
   if(!errorFlag) {
-    // success.style.display ='block';
-    // success.innerHTML = 'Message sent. Thank you!'
+    success.style.display ='block';
+    success.innerHTML = 'Message sent. Thank you!'
     form.reset()
   }
 }
@@ -76,7 +76,3 @@ function clearMessages() {
   email.classList.remove('error');
   message.classList.remove('error');
 };
-
-
-// Send Message
-
