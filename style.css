@@ -551,14 +551,14 @@ textarea:focus {
 	color: var(--amaranth);
 }
 #success {
-	width: 80%;
+	width: fit-content;
 	font-size: 1rem;
 	font-weight: 600;
 	text-align: center;
 	margin: auto;
-	border-radius: 4em;
+	border-radius: 1em;
 	margin-bottom: 1.5rem;
-	padding: 0.5rem;
+	padding: 0.5rem 1rem;
 	color: var(--light-color);
 	background: var(--amaranth);
 	display: none;
