@@ -18,7 +18,7 @@ menu_item.forEach((item) => {
 });
 
 
-// Greeting according to time of the day
+// Greeting time of the day
 
 const greeting = document.getElementById('greeting')
 
