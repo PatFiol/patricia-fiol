@@ -241,6 +241,8 @@ h3 span,
 #header .hamburger.active .bar::after {
 	top: 0;
 }
+
+/* Hamburger animation */
 @keyframes hamburger-effect {
 	0% {
 		opacity: 1;
@@ -254,7 +256,6 @@ h3 span,
 
 /* HERO SECTION */
 /* Header Animation */
-
 #hero header .intro.first {
 	animation: comingFromLeft 3s 1 forwards;
 	color: transparent;
@@ -347,7 +348,6 @@ h3 span,
 }
 
 /* Greeting Animation */
-
 #greeting {
 	font-size: 2.5rem;
 	font-weight: 600;
@@ -383,17 +383,21 @@ h3 span,
 	margin: auto 2rem;
 }
 
+#about .card-item h4 {
+	padding-bottom: .5em;
+}
+
 /* SKILLS SECTION */
 
 #skills {
 	background: -webkit-linear-gradient(
 		180deg,
-		hsl(239, 29%, 54%),
+		hsl(239, 29%, 54%, 0.6),
 		hsl(0, 14%, 99%)
 	);
 	background: linear-gradient(
 		180deg,
-		hsla(239, 29%, 54%, 0.5),
+		hsla(239, 29%, 54%, 0.6),
 		hsl(0, 14%, 99%)
 	);
 }
@@ -573,7 +577,8 @@ textarea:focus {
 #contact .social-icon img:hover {
 	filter: hue-rotate(90deg);
 }
-/* FOOTER section */
+/* FOOTER */
+
 footer {
 	margin: auto;
 	text-align: center;
@@ -581,6 +586,8 @@ footer {
 	color: var(--light-color);
 	background-color: var(--dark-bg);
 }
+
+/* MEDIA QUERIES */
 
 @media only screen and (min-width: 768px) {
 	#header .nav-list .email {
