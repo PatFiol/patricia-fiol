@@ -10,7 +10,7 @@
 	--light-color: hsl(0, 18%, 98.5%);
 	--main-color: hsl(240, 30%, 40%);
 	--veryperi: hsl(239, 29%, 54%);
-	--amaranth: hsla(350, 89%, 57%);
+	--amaranth: hsl(350, 89%, 57%);
 	--light-grey: hsl(240, 5%, 70%);
 	--medium-grey: hsl(240, 5%, 50%);
 	--dark-grey: hsl(240, 17%, 32%);
@@ -349,11 +349,13 @@ h3 span,
 
 /* Greeting Animation */
 #greeting {
-	font-size: 2.5rem;
-	font-weight: 600;
+	font-size: 3.8em;
+	font-weight: 800;
 	text-align: center;
+	text-transform: capitalize;
+	text-shadow: 1px 1px 1px #000, 0 -1px 1px #000, 1px 1px 1px #000, -1px 0 0 #000, 1px 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000;
 	padding-block-end: 5rem;
-	color: var(--amaranth);
+	color: var(--light-color);
 	animation: greeting 4s forwards;
 }
 
@@ -650,11 +652,6 @@ footer {
 		padding: 0;
 		margin-top: 10%;
 	}
-
-	#greeting {
-		font-size: 3rem;
-	}
-
 	#about .cards-wrapper {
 		width: 80%;
 		flex-flow: nowrap;
